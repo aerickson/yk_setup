@@ -7,7 +7,7 @@ function append_profile() {
 # setup ssh
 echo "This is your SSH pubkey for this yubikey in ~/pubkey/ssh-pubkey."
 echo
-gpgkey2ssh `gpg --with-colons --list-keys | grep :a: | awk -F: '{ print $5 }'` > ~/pubkey/ssh-pubkey
+/usr/local/MacGPG2/bin/gpgkey2ssh `gpg --with-colons --list-keys | grep :a: | awk -F: '{ print $5 }'` > ~/pubkey/ssh-pubkey
 cat ~/pubkey/ssh-pubkey
 echo
 
